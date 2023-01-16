@@ -4,25 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="homePage.css">
     <title>homePage</title>
   </head>
   <body>
-    <div>
-<div>
+    <div class="top">
+<div class="top__profile">
     <img src="images/logo.png" alt="cinemas pic" />
-    <p>name: **** cinema</p>
-    <p>address=****</p>
+    <div>
+        <p>name: **** cinema</p>
+        <p>address=****</p>
 </div>
+</div>
+<div></div>
 <div>
     <a href="mainHomePage.html">logout</a>
 </div>
 </div>
-<main>
+<main class="main">
     <section>
-    <table>
+    <table class="main__table">
+        <thead>
         <tr>
             <th>movie name</th>
-            <th>cinema</th>
             <th>Genre</th>
             <th>view day</th>
             <th>frequency</th>
@@ -30,6 +34,8 @@
             <th>payment</th>
             <th>additional info</th>
         </tr>
+    </thead>
+    <tbody>
         <tr>
             <td>inception</td>
             <td>sci-Fi</td>
@@ -49,15 +55,19 @@
             <td>entrance is forbidden once the movie starts</td>
         </tr>
 
-
+    </tbody>
 
     </table>
 </section>
-<section>
+<section class="main__link">
 
     <a href="removeSchedule.html">remove Schedule</a>
   <a href="addSchedule.html">add schedule</a></body>
 </section>
 </main>
+<footer>
+    <p>owned by ⒸcodeCircle</p>
+    <p>this website is developed and adminstered by codeCircle corporation</p>
+  </footer>
 </body>
 </html>

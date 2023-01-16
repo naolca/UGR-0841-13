@@ -1,0 +1,119 @@
+html {
+  min-height: 100vh;
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+body {
+  background-color: rgb(222, 190, 6);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100%;
+
+  box-sizing: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+.top h1 {
+  margin-top: 0px;
+}
+
+.top a {
+  margin: 10px;
+  padding: 10px 0px 10px 0px;
+  padding-left: 0;
+  border: 1px solid rgb(29, 28, 28);
+  /* background-color: #000; */
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-decoration: none;
+  font: bold 11px Arial;
+
+  border-radius: 5px;
+  text-align: center;
+}
+
+.main__section {
+  display: flex;
+  flex-direction: column;
+}
+.main__form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  padding: 3em;
+  height: 50%;
+  width: 50%;
+  border-radius: 20px;
+  border-left: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid white;
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+input {
+  height: 35px;
+  width: 100%;
+  border-radius: 20px;
+  text-align: center;
+}
+.main__button {
+  margin: 30px 0px 10px 0px;
+
+  padding: 10px 30px 10px 30px;
+  border: 1px solid rgb(29, 28, 28);
+  /* background-color: #000; */
+  color: rgb(255, 255, 255);
+  background-color: rgb(222, 190, 6);
+  color: white;
+  text-decoration: none;
+  font: bold 11px Arial;
+
+  border-radius: 5px;
+  text-align: center;
+}
+.main__button {
+  margin-top: 10px;
+}
+
+footer {
+  background-color: rgb(79, 79, 43);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+  position: sticky;
+  top: 100%;
+  bottom: none;
+  margin: auto;
+  margin-top: 4em;
+  min-width: 100%;
+}
+footer p {
+  text-align: center;
+}
+
+.form__field--error input {
+  border: 2px solid red;
+  height: 40px;
+}
+
+.form__field--error div {
+  color: red;
+}

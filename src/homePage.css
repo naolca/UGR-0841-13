@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  background-color: rgb(222, 190, 6);
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 2fr 4fr 0.5fr;
+  max-height: 30%;
+}
+.top a {
+  margin: 30px 0px 10px 0px;
+
+  padding: 10px 30px 10px 30px;
+  border: 1px solid rgb(29, 28, 28);
+  /* background-color: #000; */
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-decoration: none;
+  font: bold 11px Arial;
+
+  border-radius: 5px;
+  text-align: center;
+}
+.top img {
+  width: 35%;
+  height: 40%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.top__profile {
+  display: flex;
+  margin: 10px 0 10px 10px;
+}
+p {
+  margin: 10px;
+}
+.top__profile div {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.main__table thead {
+  background-color: #ee2828;
+}
+
+.main__table thead tr th {
+  font-size: 14px;
+  font-weight: medium;
+  letter-spacing: 0.35px;
+  color: #ffffff;
+  opacity: 1;
+  padding: 12px;
+  vertical-align: top;
+  border: 1px solid #dee2e685;
+}
+
+.main__table tbody tr td {
+  font-size: 14px;
+  letter-spacing: 0.35px;
+  font-weight: normal;
+  color: #f1f1f1;
+  background-color: #3c3f44;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #dee2e685;
+}
+
+.main__link {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  gap: 50%;
+  margin: 20px;
+}
+.main__link a {
+  margin: 30px 10px 10px 0px;
+
+  padding: 10px 30px 10px 30px;
+  border: 1px solid rgb(29, 28, 28);
+  /* background-color: #000; */
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-decoration: none;
+  font: bold 11px Arial;
+
+  border-radius: 5px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .main__table thead {
+    display: none;
+  }
+  .main__table,
+  .main__table tbody,
+  .main__table tr,
+  .main__table td {
+    display: block;
+    width: 100%;
+  }
+  .main__table tr {
+    margin-bottom: 15px;
+  }
+  .main__table tbody tr td {
+    text-align: center;
+  }
+}
+
+footer {
+  background-color: rgb(79, 79, 43);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+  position: sticky;
+  top: 100%;
+  bottom: none;
+  margin: auto;
+  margin-top: 4em;
+  min-width: 100%;
+}
+footer p {
+  text-align: center;
+}
