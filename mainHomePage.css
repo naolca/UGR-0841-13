@@ -1,0 +1,162 @@
+* {
+  /* background-color:  rgb(222, 190, 6); */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(222, 190, 6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  min-height: 100vh;
+}
+
+.top {
+  width: 100%;
+  height: 80px;
+  background: #11101b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.top__logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fefefe;
+}
+
+.top__navbar ul {
+  display: flex;
+}
+
+.top__navbar ul li a {
+  display: block;
+  color: #fefefe;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+
+.top__navbar ul li a:hover {
+  color: #11101b;
+  background: #fefefe;
+}
+
+.top__navbar ul li a.active {
+  color: #11101b;
+  background: #fefefe;
+}
+
+@media only screen and (max-width: 1320px) {
+  .top {
+    padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .top {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: #fefefe;
+    margin: 6px 0px;
+  }
+  .top__navbar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    left: 0;
+    width: 100vw;
+    background: #11101b;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  .top__navbar.active {
+    height: 300px;
+  }
+  .top__navbar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    opacity: 0;
+  }
+
+  .top__navbar.active ul {
+    opacity: 1;
+  }
+
+  .top__navbar ul li a {
+    margin-bottom: 12px;
+  }
+}
+
+.main {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-align: center;
+}
+
+input {
+  border: 3px;
+  border-radius: 25px;
+  height: 30px;
+  text-align: center;
+}
+
+footer {
+  background-color: rgb(79, 79, 43);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+  position: sticky;
+  top: 100%;
+  bottom: none;
+  margin: auto;
+  margin-top: 4em;
+  min-width: 100%;
+}
+footer p {
+  text-align: center;
+}
+
+.form__field--error input {
+  border: 2px solid red;
+  height: 40px;
+}
+
+.form__field--error div {
+  color: red;
+}
