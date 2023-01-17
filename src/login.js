@@ -37,7 +37,7 @@ const validate = () => {
     highlightError($usernameInput, "username cannot contain numbers");
   }
   if (usernameValue && !nameValid($usernameInput) && passwordValue) {
-    window.location.href = "http://127.0.0.1:5500/homePage.html";
+    window.location.href = "homePage.html";
   }
 };
 

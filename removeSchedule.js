@@ -16,7 +16,7 @@ const clearError = ($input) => {
 
 const validate = () => {
   const nameInputValue = $nameInput.value.trim();
-  const viewDayInput = $viewDayInput.value.trim();
+  const viewDayInputValue = $viewDayInput.value.trim();
 
   clearError($nameInput);
   clearError($viewDayInput);
@@ -25,8 +25,11 @@ const validate = () => {
     highlightError($nameInput, "username cannot be empty");
   }
 
-  if (!viewDayInput) {
+  if (!viewDayInputValue) {
     highlightError($viewDayInput, "username cannot be empty");
+  }
+  if (nameInputValue && viewDayInputValue) {
+    window.location.href = "homePage.html";
   }
 };
 

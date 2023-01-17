@@ -60,9 +60,10 @@ const validate = () => {
     highlightError($frequencyInput, "username cannot be empty");
   }
 
-  if (!additionalInfoInputValue) {
-    highlightError($additionalInfoInput, "username cannot be empty");
-  }
+  
+  
+  if(nameInputValue && genreInputValue && viewDayInputValue && paymentInputValue && timeInputValue && frequencyInputValue){
+    window.location.href="homePage.html";
 };
 
 $form.addEventListener("submit", (event) => {
