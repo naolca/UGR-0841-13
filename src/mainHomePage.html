@@ -4,30 +4,100 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+
+    <script defer src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
     <title>mainHomePage</title>
   </head>
-  <body>
-    <section>
-      <h1>MovieHub</h1>
-      <nav>
-        <a href="login.html">login</a>
-        <a href="about.html">about us</a>
-        <a href="contact.html">contact</a>
+  <body class="bg-warning">
+    <main class="main-wrapper h-100">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">MovieHub</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link mx-2 active"
+                  aria-current="page"
+                  href="login.html"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-    </section>
-    <section>
-      <form action="">
-        <label for="search">search</label>
-        <input id="search" type="text" placeholder="search movies" />
-      </form>
-    </section>
-    <section>
-      <footer>
-        <p>owned by ⒸcodeCircle</p>
-        <p>
-          this website is developed and adminstered by codeCircle corporation
-        </p>
-      </footer>
-    </section>
+
+      <div
+        class="container h-50 d-flex justify-content-center align-items-center"
+      >
+        <div
+          class="row height d-flex justify-content-center align-items-center"
+        >
+          <div class="col-md-6 w-100">
+            <form
+              action="searchResults.html"
+              class="form needs-validation"
+              novalidate
+            >
+              <i class="fa fa-search"></i>
+              <input
+                type="text"
+                class="form-control form-input w-100"
+                placeholder="Search for movies"
+                required
+              />
+              <div class="invalid-feedback">feild cannot be empty</div>
+              <span class="left-pan"><i class="fa fa-microphone"></i></span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-center text-lg-start text-white fixed-bottom">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        owned by ⒸcodeCircle
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        this website is developed and adminstered by codeCircle corporation
+      </div>
+    </footer>
+
+    <script>
+      var forms = document.querySelectorAll(".needs-validation");
+
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener("submit", function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add("was-validated");
+        });
+      });
+    </script>
   </body>
 </html>

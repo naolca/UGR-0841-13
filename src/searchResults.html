@@ -4,63 +4,104 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+
+    <script defer src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
     <title>search-Results</title>
   </head>
-  <body>
+  <body class="bg-warning">
     <section>
       <div>
-        <a href="mainHomePage.html">back</a>
+        <a class="btn btn-dark" href="mainHomePage.html">back</a>
       </div>
-      <div>
-        <form action="">
-          <label for="search">Search</label>
-          <input id="search" type="text" placeholder="search movies" />
-        </form>
+
+      <div class="container">
+        <div
+          class="row height d-flex justify-content-center align-items-center"
+        >
+          <div class="col-md-6">
+            <form class="form needs-validation" novalidate>
+              <i class="fa fa-search"></i>
+              <input
+                type="text"
+                class="form-control form-input"
+                placeholder="Search for movies"
+                required
+              />
+              <div class="invalid-feedback">feild cannot be empty</div>
+
+              <span class="left-pan"><i class="fa fa-microphone"></i></span>
+            </form>
+          </div>
+        </div>
       </div>
+
       <div>
-        <h1>MovieHub</h1>
+        <h1 class="text-center">MovieHub</h1>
       </div>
     </section>
     <main>
       <section>
-        <table>
-          <tr>
-            <th>movie name</th>
-            <th>cinema</th>
-            <th>Genre</th>
-            <th>view day</th>
-            <th>frequency</th>
-            <th>time</th>
-            <th>payment</th>
-            <th>additional info</th>
-          </tr>
-          <tr>
-            <td>inception</td>
-            <td>alem cinema</td>
-            <td>sci-Fi</td>
-            <td>monday</td>
-            <td>everyday</td>
-            <td>3pm-6pm</td>
-            <td>150 birr</td>
-            <td>3D experience requires additional payment</td>
-          </tr>
-          <tr>
-            <td>inception</td>
-            <td>cinema Ethiopia</td>
-            <td>sci-Fi</td>
-            <td>sunday</td>
-            <td>everyday</td>
-            <td>7pm-10pm</td>
-            <td>120 birr</td>
-            <td>entrance is forbidden once the movie starts</td>
-          </tr>
+        <table class="table mx-auto">
+          <thead>
+            <tr class="bg-danger">
+              <th scope="col">movie name</th>
+              <th scope="col">Genre</th>
+              <th scope="col">view Day</th>
+              <th scope="col">frequency</th>
+              <th scope="col">time</th>
+              <th scope="col">payment</th>
+              <th scope="col">additional info</th>
+            </tr>
+          </thead>
+          <tbody class="bg-secondary">
+            <tr>
+              <th scope="row">inception</th>
+              <td>sci-Fi</td>
+              <td>monday</td>
+              <td>everyday</td>
+              <td>3pm-6pm</td>
+              <td>150 birr</td>
+              <td>3D experience requires additional payment</td>
+            </tr>
+            <tr>
+              <th scope="row">Titanic</th>
+              <td>romance</td>
+              <td>teusday</td>
+              <td>everyday</td>
+              <td>12pm-9pm</td>
+              <td>100 birr</td>
+              <td>entrance is forbidden once the movie starts</td>
+            </tr>
+          </tbody>
         </table>
       </section>
     </main>
 
-    <footer>
-      <p>owned by ⒸcodeCircle</p>
-      <p>this website is developed and adminstered by codeCircle corporation</p>
+    <footer class="bg-dark text-center text-lg-start text-white sticky-bottom">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        owned by ⒸcodeCircle
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        this website is developed and adminstered by codeCircle corporation
+      </div>
     </footer>
+
+    <script>
+      var forms = document.querySelectorAll(".needs-validation");
+
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener("submit", function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add("was-validated");
+        });
+      });
+    </script>
   </body>
 </html>

@@ -4,36 +4,174 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+
+    <script defer src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
     <title>add schedule</title>
   </head>
-  <body>
-<div>
-    <a href="homePage.html">back</a>
-    <h1>MovieHub</h1>
-</div>
+  <body class="bg-warning">
+    <div>
+      <a class="btn btn-dark" href="homePage.html">back</a>
+      <h1 class="text-center">MovieHub</h1>
+    </div>
     <main>
-        <section>
-            <form action="">
-                <div>
-                <label for="genre">Genre</label>
-                <input id="genre" type="text" />
-                <label for="view-day">view day</label>
-                <input id="view-day" type="text" />
-            <label for="payment">payment</label>
-            <input id="payment" type="text" /></label>
-            <label for="time">time</label>
-            <input id="time" type="text" />
-            <label for="frequency">frequency</label>
-            <input id="frequency" type="text" />
-            <label for="additional-information">additional informantion</label>
-            <input id="additional-information" type="text" />
-                </div>
-<div>
-            <button type="submit">add to schedule</button>
-        </div>
+      <div class="container mt-5 mb-5 d-flex justify-content-center">
+        <form
+          action="homePage.html"
+          class="card px-1 py-4 bg-dark needs-validation"
+          novalidate
+        >
+          <div class="card-body">
+            <div class="d-flex flex-row"></div>
 
-            </form>
-        </section>
-</main>
+            <div class="row">
+              <div class="col-sm-12"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="input-group px-5 mt-3 mb-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="name"
+                      required
+                    />
+                    <div class="invalid-feedback">feild cannot be empty</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="input-group px-5 mt-3 mb-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Genre"
+                      required
+                    />
+                    <div class="invalid-feedback">feild cannot be empty</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="input-group px-5 mt-3 mb-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="view day"
+                      required
+                    />
+                  </div>
+                  <div class="invalid-feedback">feild cannot be empty</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="input-group px-5 mt-3 mb-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="payment"
+                      required
+                    />
+                    <div class="invalid-feedback">feild cannot be empty</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="input-group px-5 mt-3 mb-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="time"
+                      required
+                    />
+                    <div class="invalid-feedback">feild cannot be empty</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="input-group px-5 mt-3 mb-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="frequency"
+                      required
+                    />
+                    <div class="invalid-feedback">feild cannot be empty</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="input-group px-5 mt-3 mb-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="additional informantion"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-warning w-100">
+              Add Schedule
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-center text-lg-start text-white fixed-bottom">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        owned by ⒸcodeCircle
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        this website is developed and adminstered by codeCircle corporation
+      </div>
+    </footer>
   </body>
+
+  <script>
+    var forms = document.querySelectorAll(".needs-validation");
+
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener(
+        "submit",
+        function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add("was-validated");
+        },
+        false
+      );
+    });
+  </script>
 </html>

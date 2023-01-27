@@ -4,25 +4,92 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+
+    <script defer src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
     <title>login</title>
   </head>
-  <body>
+  <body class="bg-warning">
     <section>
-      <a href="mainHomePage.html">back</a>
-    </section>
-    <section>
-      <form action="">
-        <label for="username">username</label>
-        <input id="username" type="text" placeholder="username" />
-        <label for="password">password</label>
-        <input id="password" type="text" placeholder="password" />
-        <button>login</button>
-      </form>
+      <a class="btn btn-dark" href="mainHomePage.html">back</a>
     </section>
 
-    <footer>
-      <p>owned by ⒸcodeCircle</p>
-      <p>this website is developed and adminstered by codeCircle corporation</p>
+    <div class="container mt-5 mb-5 d-flex justify-content-center">
+      <form
+        action="homePage.html"
+        class="card px-1 py-4 bg-dark needs-validation"
+        novalidate
+      >
+        <div class="card-body">
+          <div class="d-flex flex-row"></div>
+
+          <div class="row">
+            <div class="col-sm-12"></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="input-group px-5 mt-3 mb-3">
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="username"
+                    required
+                  />
+                  <div class="invalid-feedback">incorrect username</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="input-group px-5 mt-3 mb-3">
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="password"
+                    required
+                  />
+                </div>
+                <div class="invalid-feedback">incorrect password</div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="d-flex flex-column text-center px-5 mt-3 mb-3"></div> -->
+          <button type="submit" class="btn btn-warning w-100">Login</button>
+        </div>
+      </form>
+    </div>
+
+    <footer class="bg-dark text-center text-lg-start text-white fixed-bottom">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        owned by ⒸcodeCircle
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        this website is developed and adminstered by codeCircle corporation
+      </div>
     </footer>
+
+    <script>
+      var forms = document.querySelectorAll(".needs-validation");
+
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener(
+          "submit",
+          function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    </script>
   </body>
 </html>

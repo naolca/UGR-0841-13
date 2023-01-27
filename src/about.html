@@ -4,45 +4,65 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+
+    <script defer src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
     <title>about</title>
   </head>
-  <body>
+  <body class="bg-warning">
     <div>
-      <a href="mainHomePage.html">back</a>
+      <a class="btn btn-dark" href="mainHomePage.html">back</a>
     </div>
     <main>
       <section>
         <div>
-          <h1>MovieHub</h1>
+          <h1 class="text-center">MovieHub</h1>
         </div>
         <div>
-          <h2>about us</h2>
+          <h2 class="text-center">about us</h2>
         </div>
-        <div>
-          <p>
-            we believe that people deserve to have a simple life. we are fully
-            aware that peoples life is often filled with many hard ships and we
-            want to make some part of that hardship a little simpler.
-          </p>
-        </div>
-        <div>
-          <video src="videos/video.mkv" controls="controls"></video>
+        <div class="row">
+          <div class="col">
+            <p>
+              we believe that people deserve to have a simple life. we are fully
+              aware that peoples life is often filled with many hard ships and
+              we want to make some part of that hardship a little simpler.
+            </p>
+          </div>
+          <div class="col">
+            <video
+              class="w-100 h-"
+              src="videos/video.mkv"
+              controls="controls"
+            ></video>
+          </div>
         </div>
       </section>
       <section>
-        <h3>
+        <h3 class="text-center">
           if you are having trouble reading the above paragraph, we have the
           voice version down here.
         </h3>
       </section>
-      <div>
+      <div class="container justify-content-center">
         <audio controls src="audios/au.ogg"></audio>
       </div>
-      <footer>
-        <p>owned by ⒸcodeCircle</p>
-        <p>
+
+      <footer class="bg-dark text-center text-lg-start text-white fixed-bottom">
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          owned by ⒸcodeCircle
+        </div>
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
           this website is developed and adminstered by codeCircle corporation
-        </p>
+        </div>
       </footer>
     </main>
   </body>

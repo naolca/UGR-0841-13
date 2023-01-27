@@ -4,27 +4,87 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+
+    <script defer src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
     <title>remove schedule</title>
   </head>
-  <body>
+  <body class="bg-warning">
     <div>
-      <a href="homePage.html">back</a>
-      <h1>MovieHub</h1>
+      <a class="btn btn-dark" href="homePage.html">back</a>
+      <h1 class="text-center">MovieHub</h1>
     </div>
     <main>
-      <section>
-        <form action="">
-          <div>
-            <label for="genre">Genre</label>
-            <input id="genre" type="text" placeholder="genre" />
-            <label for="view-day">view day</label>
-            <input type="text" name="" id="view-day" placeholder="view day" />
-          </div>
-          <div>
-            <button type="submit">remove schedule</button>
+      <div class="container mt-5 mb-5 d-flex justify-content-center">
+        <form
+          action="homePage.html"
+          class="card px-1 py-4 bg-dark needs-validation"
+          novalidate
+        >
+          <div class="card-body">
+            <div class="d-flex flex-row"></div>
+
+            <div class="row">
+              <div class="col-sm-12"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="input-group px-5 mt-3 mb-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="name"
+                      required
+                    />
+                    <div class="invalid-feedback">feild cannot be empty</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="input-group px-5 mt-3 mb-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="view day"
+                      required
+                    />
+                    <div class="invalid-feedback">feild cannot be empty</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column text-center px-5 mt-3 mb-3"></div>
+            <button class="btn btn-warning w-100" type="submit">
+              remove schedule
+            </button>
           </div>
         </form>
-      </section>
+      </div>
     </main>
+
+    <script>
+      var forms = document.querySelectorAll(".needs-validation");
+
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener(
+          "submit",
+          function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+              // window.location.href = "homePage.html";
+            }
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    </script>
   </body>
 </html>
